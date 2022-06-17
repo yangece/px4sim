@@ -23,8 +23,10 @@ This repo contains instructions and demo code for PX4 flight simulation in ROS G
 ## Demo steps
 1. First, run docker container: 
 ```
-docker exec --user [username] -it bash
+docker exec --user [USER_NAME] -it [CONTAINER_ID] bash
 ```
+
+use Docker ps command to get CONTAINER_ID
 
 2. Run commands in multipler terminals:
 - terminal 1: roslaunch mavros px4.launch fcu_url:="udp://:14540@127.0.0.1:14557"
@@ -32,6 +34,8 @@ docker exec --user [username] -it bash
 - terminal 3: sudo make px4_sitl_default gazebo
 - terminal 4: python3 mission_test.py MC_mission_box.plan
 - terminal 5: rqt
+
+Note that you need to turn on the Xserver for all users by typing "xhost +" on terminal 3 and/or others.
 
 3. for Mavros diagnostics
 ```
