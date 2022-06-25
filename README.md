@@ -15,14 +15,14 @@ This repo contains instructions and demo code for PX4 flight simulation in ROS G
     - `sudo usermod -a -G dialout $USER`
     - `sudo apt-get remove modemmanager -y`
     - Manually download QGC appimage
-        - **Alert** please install version v4.1.4(https://github.com/mavlink/qgroundcontrol/releases/download/v4.1.4/QGroundControl.AppImage) or lower, higher version may need to use qt5.15, which is not provided by ubuntu 20.04 LTS offically(5.12 instead)
-        - If you wanna use latest QGC, please update QT manually from qt official site and update env. 
+        - **Alert** please install version:v4.1.4 (https://github.com/mavlink/qgroundcontrol/releases/download/v4.1.4/QGroundControl.AppImage) or lower, higher version may need to use qt5.15, which is not provided by ubuntu 20.04 LTS offically(5.12 instead)
+        - If you wanna use latest QGC, please upgrade your QT manually from qt official site and update env 
 - PX4 for gazebo
     - `sudo apt install libgazebo9-dev`
 - Build PX4 firmwire from source code
     - Get Firmwire source code `git clone https://github.com/PX4/Firmware.git` 
     - `cd Firmware` 
-    - Build firewall by running `make rostest`  or `make px4_sitl_default`
+    - Build firmwire by running `make rostest`  or `make px4_sitl_default`
 - Others:
     - `sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-libav gstreamer1.0-gl -y`
     - `pip3 install px4tools`
